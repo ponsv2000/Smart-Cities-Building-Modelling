@@ -1,3 +1,5 @@
+![accueil](https://keep.google.com/u/0/media/v2/1Z27dWgkS9GaqX8yjuQgZvUQ1sTnUaskxTNZi0v8dckaJq1hpK6jM_BtiY_zmyqg/1kkq46vjsV5ha0jmtYur-O7Y5vveDW5gx4Z_ZtT9uDf7g1Eq27uzDqR9AU153ZxI?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg)
+
 # **Introduction**
 
 The building sector is an energy consuming sector. It will then be very important to succeed in reducing the energy consumed by the buildings and to do this there are several parameters to take into account such as the geometry of the building and the materials which constitute it. The study made during these three sessions consists in the estimation of the energy efficiency of a smart home by modeling and simulation.
