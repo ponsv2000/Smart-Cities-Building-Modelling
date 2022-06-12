@@ -3,7 +3,7 @@
 
 ## **Dynamic Models for Building Energy Management**
 
-![accueil](./pictures/report/image22.png)
+![accueil](./pictures/report/image22.jpg)
 
 # **Introduction**
 
