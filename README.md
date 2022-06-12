@@ -3,11 +3,13 @@
 **2A SEM/SGB**
 *30/05/2022*
 ----
+::: tip Redacted by :
 *Redacted by :*
 * JOHANSSON Markus
 * MELLIER Sam
 * PONS Victoria 
 * ROBERT Clément
+:::
 ----
 # **UE SMART CITIES**
 
