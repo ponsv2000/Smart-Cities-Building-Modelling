@@ -1,24 +1,15 @@
-
-
-
-See the PDF file to have the complete report.
-
-
-
 # **Introduction**
 
 The building sector is an energy consuming sector. It will then be very important to succeed in reducing the energy consumed by the buildings and to do this there are several parameters to take into account such as the geometry of the building and the materials which constitute it. The study made during these three sessions consists in the estimation of the energy efficiency of a smart home by modeling and simulation.
 
 The plan for the three sessions can be found below:
 
-Session 1 - **Model**
-
-Session 2 - **Implementation** (Python code + run/debug)
-
-Session 3 - **Optimization of the code** (design/operation)
+* Session 1 - **Model**
+* Session 2 - **Implementation** (Python code + run/debug)
+* Session 3 - **Optimization of the code** (design/operation)
 
 
-# **Hypothesis **
+# **Hypothesis**
 
 The heat transfer is assumed to take place in a single direction, and the heat transfer is considered only through the walls, on which the temperature is uniform at all points (heat transfer with the floor and ceiling are neglected). Also, all heat exchanges are considered linearized.
 
@@ -54,7 +45,7 @@ _Figure 1. The studied building and its dimensions with an assumed ceiling heigh
 # **II_Thermal and mathematical model**
 
 
-## **1.Composition of the walls **
+## **1.Composition of the walls**
 
 A heat flow could be described as a flow of energy due to variances in temperature between two positions, and it can occur in the form of conduction, convection, radiation as well as advection, similar to the case presented in figure 3. 
 
@@ -275,7 +266,7 @@ where:
 * λ is the thermal conductivity of the wall part (W/m/K)
 
 
-## **4. Code implementation **
+## **4. Code implementation**
 
 The construction of the thermal model requires the different principles of thermodynamics:
 
@@ -315,7 +306,7 @@ The three equations above combined lead us to the following differential equatio
 ## 
 
 
-## **5. Matrix A, C and G **
+## **5. Matrix A, C and G**
 
 For our model, we have 28 temperature nodes and 33 heat flows (we consider the controller Kp in it) . Therefore, the matrices and the vectors that will be created will depend on this number of nodes and flows.
 
@@ -331,7 +322,7 @@ For our model, we have 28 temperature nodes and 33 heat flows (we consider the c
 * the **G** matrix (33x33) for the conductances
 * finally, the vector **Ө** (28x1) which concerns the temperatures at each node
 
-**About the matrix A : **
+**About the matrix A :**
 
 (The matrix A is very big so here is a reconstruction of what we obtained with the code)
 
@@ -345,7 +336,7 @@ A = zeros (33,28)
 ![alt_text](images/image11.png "image_tooltip")
 
 
-**About the G matrix : **
+**About the G matrix :**
 
 You can see in **Annexe 2** the exact calculations, so the exact components of the matrix wrote down : 
 
@@ -387,7 +378,7 @@ with g :** **
 ![alt_text](images/image13.png "image_tooltip")
 
 
-**About the matrix C : **
+**About the matrix C :**
 
 You can see in **Annexe 3** the exact calculations, so the exact components of the matrix wrote down : 
 
@@ -408,7 +399,7 @@ So here is only the c matrix, with C =diag(c)
 For the simulation, we erased all the low conductances. 
 
 
-## **6. Vectors b and f in time **
+## **6. Vectors b and f in time**
 
 The vector of temperature sources is b. It has the size of the number of branches and if its element is corresponding to a branch without a source is zero. If the flow in a source is from low potential to high potential (i.e. from - to +), the source is positive
 
@@ -454,10 +445,10 @@ We will use : 1000 W/m2 K and 500 W/m2 K values for our simulation.
 # 
 
 
-# **III_Simulation **
+# **III_Simulation**
 
 
-## **1.Steady-state **
+## **1.Steady-state**
 
 We will use :  h<sub>out</sub> = air convection coefficient = 25 & h<sub>in</sub> = 8 
 
@@ -518,7 +509,7 @@ We obtain the following values :
 
 
 
-## **2. Steady -state : step response **
+## **2. Steady -state : step response**
 
 We simulate a step response using the following vector: 
 
@@ -529,7 +520,7 @@ It means that the outside temperature is 1°C, the initial temperature of the ma
 The temperature shown is from the main room. It goes from 20°C to 1°C. 
 
 
-# **3 _ Dynamic model **
+# **3 _ Dynamic model**
 
 In dynamic simulation, the inputs vary in time. Let's indicate the sources in the circuit by ones.
 
@@ -559,9 +550,9 @@ The maximum time step for numerical stability of Euler explicit integration in t
 
 The maximum time step for numerical stability of Euler explicit integration in time depends on the value of the P-controller gain and if the capacities of the indoor air and window glass are taken into account.
 
-**We obtain a maximum time step of 30,61 sec. **
+**We obtain a maximum time step of 30,61 sec.**
 
-**Let’s look at the step response : **
+**Let’s look at the step response :**
 
 For the input vector u, the outdoor temperatures will be T<sub>o</sub> = 1, the indoor set-point temperature will be T<sub>sp</sub> = 0, and the heat flow sources will be zero.
 
@@ -603,7 +594,7 @@ and Euler backward (or implicit) integration :
 
 we obtain the outputs.
 
-**The obtained curves are presented at the following page:  **
+**The obtained curves are presented at the following page:**
 
 
 
@@ -628,14 +619,14 @@ we obtain the outputs.
 
 
 
-## **4.Simulation with weather data **
+## **4.Simulation with weather data**
 
 We didn’t succeed at simulating this part. 
 
 But we could have seen the impact of radiation on the indoor temperature. 
 
 
-# **Conclusion **
+# **Conclusion**
 
 It is crucial to analyse the heat flow in a building to be able to enable energy management and optimise the energy consumption of the building. By creating a model of a building and considering heat flows in the form of conduction, convection and radiation in both steady state and dynamic conditions, this can be accomplished. In this project, we were able to develop a coherent thermal model of a building and verify the relevance of our modelling choices through simulations. The obtained results are consistent for both the static and the dynamic model, but it can be seen that the obtained time step of about 30 seconds regarding the dynamic model, is relatively small. This implies that the simulation possibly could be improved. 
 
