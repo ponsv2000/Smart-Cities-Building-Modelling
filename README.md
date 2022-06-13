@@ -10,6 +10,9 @@
 * ROBERT Clément
 ----
 
+
+# **RUN THE CODE IN THE IPYNB FILE IN THE JUPYTHER NOTEBOOK**
+
 # **UE SMART CITIES**
 
 ## **Dynamic Models for Building Energy Management**
