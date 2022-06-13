@@ -1,4 +1,5 @@
-![logo_ecole](./pictures/report/image25.png)
+You can find the binder link here : 
+https://mybinder.org/v2/gh/ponsv2000/Smart-Cities-Building-Modelling/6080867565dec25b386eec528a964e08786b7f92?urlpath=lab%2Ftree%2FUntitled.ipynb
 ----
 **2A SEM/SGB**
 *30/05/2022*
